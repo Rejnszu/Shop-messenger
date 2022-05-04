@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger Card</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="messenger.css" />
+
+    <script src="messenger.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"
+        defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"
+        defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"
+        defer></script>
+</head>
+
+<body>
+    <div class="site-content">
+        <div class="messenger-cards-wrapper">
+
+            <div class="messenger-rolled">
+                <p>Masz pytanie?</p><i class="bi bi-chat-text"></i>
+            </div>
+            <div class="messenger-fullSize mt-5">
+                <div class="messenger-fullSize__upperPart">
+                    <div class="upperPart__img-wrapper"><img src="/assets/person.png" alt="person"></div>
+                    <div class="upperPart__text">
+                        <p>Jak możemy pomóc?</p>
+                        <p>Nasz konsultant jest dostępny.</p>
+                    </div>
+                    <div class="upperPart__icons"><i title="Więcej informacji" class="bi bi-three-dots-vertical"></i><i
+                            title="Zamknij messenger" class="bi bi-x close-icon"></i>
+                    </div>
+                </div>
+                <div class="messenger-fullSize__middlePart">
+                    <div class="sample-message">Witaj w naszym sklepie! Jeśli masz jakiekolwiek pytania, napisz tutaj, a
+                        my od razu się z tobą skontaktujemy. <span class="hour">10.00</span></div>
+                </div>
+                <div class="messenger-fullSize__lowerPart">
+                    <input type="text" placeholder="Wpisz swoją wiadomość" class="message-input">
+                    <div class="lowerPart__icons"> <i class="bi bi-emoji-smile"></i><i class="bi bi-send send-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
