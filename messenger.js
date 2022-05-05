@@ -49,3 +49,20 @@ function isThereAnyMessageHandler() {
 }
 
 messageInput.addEventListener("input", isThereAnyMessageHandler);
+
+const moreInformationButton = document.querySelector(
+  ".more_information_button"
+);
+const moreInformationContainer = document.querySelector(
+  ".more_information_container"
+);
+moreInformationButton.addEventListener("click", () =>
+  moreInformationContainer.classList.toggle("active")
+);
+
+messageInput.addEventListener("focus", () => {
+  messengerMiddlePart.classList.add("changeBorder");
+});
+messageInput.addEventListener("blur", () => {
+  messengerMiddlePart.classList.remove("changeBorder");
+});
