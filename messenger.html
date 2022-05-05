@@ -43,10 +43,18 @@
                 </div>
                 <div class="messenger-fullSize__middlePart">
                     <div class="sample-message">Witaj w naszym sklepie! Jeśli masz jakiekolwiek pytania, napisz tutaj, a
-                        my od razu się z tobą skontaktujemy. <span class="hour">10.00</span></div>
+                        my od razu się z tobą skontaktujemy. <span class="hour"></span></div>
+                    <template data-user-message-template>
+                        <div data-user-message-container>
+                            <p data-user-message-text>
+                            <p data-user-message-hour></p>
+                            </p>
+                        </div>
+                    </template>
                 </div>
                 <div class="messenger-fullSize__lowerPart">
-                    <input type="text" placeholder="Wpisz swoją wiadomość" class="message-input">
+                    <textarea type="text" placeholder="Wpisz swoją wiadomość" class="message-input" rows="4"
+                        cols="25"></textarea>
                     <div class="lowerPart__icons"> <i class="bi bi-emoji-smile"></i><i class="bi bi-send send-icon"></i>
                     </div>
                 </div>
