@@ -9,11 +9,17 @@ const messengerMiddlePart = document.querySelector(
   ".messenger-fullSize__middlePart"
 );
 const asistantMessageHour = document.querySelector(".hour");
-asistantMessageHour.innerHTML = `${new Date().getHours()}:${new Date().getMinutes()}`;
+asistantMessageHour.innerHTML = `${new Date().getHours()}:${
+  new Date().getMinutes() > 9
+    ? new Date().getMinutes()
+    : "0" + new Date().getMinutes()
+}`;
 
-messengerRolled.addEventListener("click", () =>
-  messengerFullSize.classList.toggle("active")
-);
+messengerRolled.addEventListener("click", () => {
+  messengerFullSize.classList.toggle("active");
+  let sampleMessage = document.querySelector(".sample-message");
+  setTimeout(() => (sampleMessage.style.display = "block"), 1500);
+});
 closeIcon.addEventListener("click", () =>
   messengerFullSize.classList.toggle("active")
 );
@@ -32,9 +38,14 @@ function newUserMessage() {
   let messageHour = message.querySelector("[data-user-message-hour]");
 
   messageText.innerHTML = messageInput.value;
-  messageHour.innerHTML = `${new Date().getHours()}:${new Date().getMinutes()}`;
+  messageHour.innerHTML = `${new Date().getHours()}:${
+    new Date().getMinutes() > 9
+      ? new Date().getMinutes()
+      : "0" + new Date().getMinutes()
+  }`;
 
   messengerMiddlePart.append(message);
+
   messageInput.value = "";
   deactivateSendButton();
 }
